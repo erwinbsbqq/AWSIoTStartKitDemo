@@ -1,14 +1,20 @@
-                                                    GoWarrior AWS IoT StartKit
-GoWarrior TigerBoard AWS IoT StartKit enables users to easily prototype cloud-connected IoT designs. It provides embedded developers a way to quickly develop internet connected embedded products that interface with peripherals over the UART, I2C, SPI, GPIO, etc, and talk to the AWS IoT service.
-TigerBoard has 1Ghz dual-core Cortex-A9, 4GB nand flash, 1GB DDR, Wi-Fi, Ethernet, and HDMI display.
-The StartKit has 2 demo applications of LED switcher using 8 onboard leds and 2 onboard user keys on GoWarrior GoBian platform located in the apps folder:
-1) shadow_LED_switcher:
-  This demo use 2 onboard user keys as input to simulate mobile application remote control 8 onboard leds. GoWarrior GoBian platform acts as a device of aws iot connected to a shadow named ‘gwiottest01’. In this demo, a shadow update with desired led color will be sent to aws iot when triggering user key. And then aws iot will publish a shadow delta message back to the demo which subscribed to the shadow delta topic. Finally demo switches led to the color in delta message and sends a shadow update with reported led color to aws iot.
-  The user key1 and user key2 is different from led color change order.
-2) pub_sub_LED_switcher:
-  This demo uses MQTT message publish and subscribe through aws iot to do same LED switcher.
-
+GoWarrior AWS IoT StartKit
+===================================
+GoWarrior TigerBoard AWS IoT StartKit enables users to easily prototype cloud-connected IoT designs. It provides embedded developers a way to quickly develop internet connected embedded products that interface with peripherals over the UART, I2C, SPI, GPIO, etc, and talk to the AWS IoT service.   
+    
+TigerBoard has 1Ghz dual-core Cortex-A9, 4GB nand flash, 1GB DDR, Wi-Fi, Ethernet, and HDMI display.    
+The StartKit has 2 demo applications of LED switcher using 8 onboard leds and 2 onboard user keys on GoWarrior GoBian platform located in the apps folder:    
+    
+1) shadow_LED_switcher:    
+   This demo use 2 onboard user keys as input to simulate mobile application remote control 8 onboard leds. GoWarrior GoBian platform acts as a device of aws iot connected to a shadow named ‘gwiottest01’. In this demo, a shadow update with desired led color will be sent to aws iot when triggering user key. And then aws iot will publish a shadow delta message back to the demo which subscribed to the shadow delta topic. Finally demo switches led to the color in delta message and sends a shadow update with reported led color to aws iot.    
+   The user key1 and user key2 is different from led color change order.    
+    
+2) pub_sub_LED_switcher:    
+This demo uses MQTT message publish and subscribe through aws iot to do same LED switcher.    
+    
+    
 You need to do as following steps to try the demo:
+------------------
 1.	If you don’t have AWS account, you need to create one on “http://aws.amazon.com/”.
 2.	Open the AWS IoT Dashboard in console.
 ![image](https://github.com/GoWarrior/AWSIoTStartKitDemo/raw/master/readme-res/step2.png) 
